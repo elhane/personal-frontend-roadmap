@@ -38,6 +38,8 @@ function Navbar({className}: NavbarProps ): JSX.Element {
           ))
         }
       </ul>
+
+      <div className={styles.nav__copyright}>&copy; Elena Gracheva</div>
     </nav>
   )
 }

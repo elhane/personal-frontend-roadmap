@@ -1,24 +1,32 @@
 .nav {
-  display: flex;
+  display: grid;
   align-items: center;
   padding: 2rem;
-  background-color: var(--primary-400);
+  background-color: var(--grey-700);
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 28px;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 
   &__item {
     display: grid;
     grid-template-columns: 40px 1fr;
     grid-gap: 20px;
     align-items: center;
-    color: var(--white);
+    color: var(--grey-100);
     font-weight: 600;
-    transition: color 0.6s;
+    transition: color 0.3s;
 
     &:not(:last-child) {
       margin-bottom: 2rem;
     }
 
     &:hover {
-      color: var(--grey-800);
+      color: var(--grey-900);
     }
   }
 
@@ -30,12 +38,21 @@
 
     svg {
       color: currentColor;
-      transition: currentColor 0.6s;
+      transition: currentColor 0.3s;
     }
+  }
+
+  &__copyright {
+    margin: 0;
+    display: flex;
+    line-height: 1;
+    align-items: center;
+    justify-content: center;
+    color: var(--grey-900);
   }
 }
 
 .active {
-  color: var(--primary-900);
+  color: var(--primary-400);
   pointer-events: none;
 }
