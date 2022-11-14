@@ -1,0 +1,12 @@
+.topics {
+
+  &__item {
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--grey-200);
+
+    &:not(:last-child) {
+      margin-bottom: 0.9rem;
+    }
+  }
+}
+

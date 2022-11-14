@@ -5,7 +5,7 @@ export const navLinks = [
     icon: 'world'
   },
   {
-    name: 'Everyday todos',
+    name: 'Todos',
     href: '/todos',
     icon: 'checklist'
   },
