@@ -1,4 +1,4 @@
-import '../styles/globals.scss'
+import '../styles/_main.scss'
 import type { AppProps } from 'next/app'
 import Layout from '../components/layout'
 import {SVGSource} from '../components/svg/index'

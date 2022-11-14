@@ -1,0 +1,22 @@
+.page {
+  min-height: calc(100vh - var(--verPadding) * 2);
+
+  &__title {
+    margin-bottom: 3rem;
+    font-weight: 600;
+    color: var(--grey-700);
+    border-bottom: 2px dotted currentColor;
+  }
+
+  &__content {
+    &--columns {
+      display: grid;
+      grid-template-columns: 1fr 35%;
+      grid-gap: 5rem;
+    }
+  }
+
+  &__column {
+
+  }
+}
