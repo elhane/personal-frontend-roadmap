@@ -114,3 +114,40 @@ ul {
     color: var(--primary-700);
   }
 }
+
+.text-green {
+  color: var(--primary-400);
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.button {
+  width: auto;
+  height: 2rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-400);
+  border: none;
+  color: var(--white);
+  font-weight: 500;
+  cursor: pointer;
+
+  &--full-width {
+    width: 100%;
+  }
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
+
+  &--grey-600 {
+    background-color: var(--grey-600);
+  }
+}
+
+

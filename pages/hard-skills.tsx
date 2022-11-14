@@ -22,7 +22,10 @@ const sources = [
 
 function HardSkills():JSX.Element {
   const [links, setLinks] = useState(sources);
-  const [topics, setTopics] = useState(['webpack', 'algorithms']);
+  const [topics, setTopics] = useState([
+    {name: 'сборка на webpack', isDone: true},
+    {name: 'повторять алгоритмы', isDone: false}
+  ]);
 
   return (
     <main className="main container">
@@ -37,7 +40,6 @@ function HardSkills():JSX.Element {
 
           <section className="brush-up-section page__column">
             <TopicsList topics={topics} setTopics={setTopics}/>
-
           </section>
 
         </section>

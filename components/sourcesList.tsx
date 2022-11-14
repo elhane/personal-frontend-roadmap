@@ -11,31 +11,41 @@ function SourcesList({sources, setLinks}:sourceListProps):JSX.Element {
 
   return (
     <>
-      <div>
-        <h5>Add source to study</h5>
-        <form action="" onSubmit={(evt) => evt.preventDefault()}>
+      <div className="page__form">
+        <h5 className="text-green fw-600 text-uppercase">Add source to study</h5>
+        <form className="form"  onSubmit={(evt) => evt.preventDefault()}>
 
-          <label>
-            name <input type="text"/>
-          </label>
+          <div className="form__row">
+            <label className="form__label">
+              <input className="form__input" type="text" placeholder="name"/>
+            </label>
+          </div>
 
-          <label>
-            link <input type="text"/>
-          </label>
+          <div className="form__row">
+            <label className="form__label">
+              <input className="form__input" type="text" placeholder="link"/>
+            </label>
+          </div>
+          <div className="form__row">
+            <label className="form__label">
+              <input className="form__input" type="text" placeholder="tags"/>
+            </label>
 
-          <label>
-            tags <input type="text"/>
-          </label>
-
-          <button onClick={() => setLinks([...sources, {
-            link: 'https://code-basics.com/ru/languages/typescript3',
-            name: 'аввим jshdfkjh sdf ловыарплывопвыап ',
-            tags: ['algorithm'],
-            date: '14.11.2022',
-            id: 6
-          }])}>
-            add source
-          </button>
+          </div>
+          <div className="form__row">
+            <button
+              className="form__button button button--full-width button--uppercase button--grey-600"
+              onClick={() => setLinks([...sources, {
+                link: 'https://code-basics.com/ru/languages/typescript3',
+                name: 'аввим jshdfkjh sdf ловыарплывопвыап ',
+                tags: ['algorithm'],
+                date: '14.11.2022',
+                id: 6
+              }])}
+            >
+              add source
+            </button>
+          </div>
         </form>
       </div>
 

@@ -6,4 +6,7 @@ export type Source = {
   id: number | string
 }
 
-export type Topic = string[];
+export type Topic = {
+  name: string,
+  isDone: boolean
+};
