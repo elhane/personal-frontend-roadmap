@@ -11,7 +11,7 @@ function SourceItem({source}: SourceItemProps): JSX.Element {
   return (
     <article className={styles.source}>
       <p className={styles.source__title}>{name}</p>
-      <a className={styles.source__link} href={link} target="_blank">
+      <a className={styles.source__link} href={link} target="_blank" rel="noreferrer" >
         {link}
       </a>
 
