@@ -3,7 +3,8 @@ export type Source = {
   name: string,
   tags: string[],
   date: string,
-  id: number | string
+  id: number | string,
+  description: string
 }
 
 export type Topic = {

@@ -6,13 +6,16 @@ type SourceItemProps = {
 };
 
 function SourceItem({source}: SourceItemProps): JSX.Element {
-  const {link, name, tags, date} = source;
+  const {link, name, tags, date, description} = source;
 
   return (
     <article className={styles.source}>
-      <a className={styles.source__link} href={link}>
-        {name}
+      <p className={styles.source__title}>{name}</p>
+      <a className={styles.source__link} href={link} target="_blank">
+        {link}
       </a>
+
+      { description ? <p className={styles.source__desc}>{description}</p> : ''}
 
       <ul className={styles.source__tags}>
         {
@@ -23,7 +26,6 @@ function SourceItem({source}: SourceItemProps): JSX.Element {
       </ul>
 
       <time className={styles.source__date}>{date}</time>
-
     </article>
   )
 }

@@ -42,25 +42,23 @@ function TopicsList({topics, setTopics}: TopicsListProps): JSX.Element {
               add topic
             </button>
           </div>
-
-
         </form>
-
-        <ul className={styles.topics}>
-          {
-            topics.map(({name, isDone}) => (
-              <li className={styles.topics__item} key={name}>
-                <Checkbox
-                  key={name}
-                  label={name}
-                  checked={isDone}
-                  checkedClass={"crossed-out"}
-                />
-              </li>
-            ))
-          }
-        </ul>
       </div>
+
+      <ul className={styles.topics}>
+        {
+          topics.map(({name, isDone}) => (
+            <li className={styles.topics__item} key={name}>
+              <Checkbox
+                key={name}
+                label={name}
+                checked={isDone}
+                checkedClass={"crossed-out"}
+              />
+            </li>
+          ))
+        }
+      </ul>
     </>
   )
 }

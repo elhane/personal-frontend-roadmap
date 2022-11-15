@@ -2,30 +2,13 @@
 import {useState} from 'react';
 import SourcesList from '../components/sourcesList';
 import TopicsList from '../components/topicsList';
+import {sources, topics} from '../mocks/mocks';
 
-const sources = [
-  {
-    link: 'https://code-basics.com/ru/languages/typescript',
-    name: 'TypeScript как второй язык [code-basics, hexlet]',
-    tags: ['TypeScript', 'JavaScript'],
-    date: '11.11.2022',
-    id: 0
-  },
-  {
-    link: 'https://code-basics.com/ru/languages/typescript',
-    name: 'Оценка сложности алгоритмов [ULearn.me]',
-    tags: ['algorithm'],
-    date: '9.11.2022',
-    id: 1
-  }
-];
+// https://habr.com/ru/company/edison/blog/479100/
 
 function HardSkills():JSX.Element {
   const [links, setLinks] = useState(sources);
-  const [topics, setTopics] = useState([
-    {name: 'сборка на webpack', isDone: true},
-    {name: 'повторять алгоритмы', isDone: false}
-  ]);
+  const [topicsList, setTopicsList] = useState(topics);
 
   return (
     <main className="main container">
@@ -39,10 +22,15 @@ function HardSkills():JSX.Element {
           </section>
 
           <section className="brush-up-section page__column">
-            <TopicsList topics={topics} setTopics={setTopics}/>
+            <TopicsList topics={topics} setTopics={setTopicsList}/>
           </section>
 
         </section>
+
+
+        {/*<div className="test">*/}
+        {/*    какой-то фон*/}
+        {/*</div>*/}
       </section>
     </main>
   )

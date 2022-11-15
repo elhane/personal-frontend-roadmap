@@ -37,7 +37,7 @@ function SourcesList({sources, setLinks}:sourceListProps):JSX.Element {
               className="form__button button button--full-width button--uppercase button--grey-600"
               onClick={() => setLinks([...sources, {
                 link: 'https://code-basics.com/ru/languages/typescript3',
-                name: 'аввим jshdfkjh sdf ловыарплывопвыап ',
+                name: 'новый ресурс для изучения',
                 tags: ['algorithm'],
                 date: '14.11.2022',
                 id: 6
